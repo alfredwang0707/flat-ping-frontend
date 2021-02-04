@@ -48,7 +48,7 @@ window.addEventListener("resize", showButton)
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <Link to='/dashboard'className="nav-links" onClick={closeMobileMenu}>
+                        <Link to='/QueryList'className="nav-links" onClick={closeMobileMenu}>
                             Dashboard
                         </Link>
                     </li>
