@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-function QueryForm() {
+function QueryForm({onAddQuery}) {
     const [queryLink, setQueryLink] =useState("")
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
@@ -22,7 +22,7 @@ function QueryForm() {
           body: JSON.stringify(formData)
         })
           .then(r => r.json())
-          .then(data =>console.log(data))
+          .then(onAddQuery)
       
     } 
 

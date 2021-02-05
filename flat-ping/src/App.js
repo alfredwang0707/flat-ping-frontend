@@ -21,9 +21,13 @@ function App() {
       setIsLoaded(true)
       })},[])
 
-  const handleUpdatedQuery = qry => {
-    const newQuery = [qry, ...queryList]
-    setQueryList(newQuery)
+  function handleUpdatedQuery(updatedQuery) {
+    const updatedQueries = queryList.map((query)=> query.id===updatedQuery.id ? updatedQuery: query)
+    setQueryList(updatedQueries)
+  }
+
+  function handleNewQuery(newQuery){
+    setQueryList([...queryList, newQuery])
   }
 
   
@@ -35,11 +39,14 @@ console.log("app.js", queryList)
     <NavBar/>
     <Switch>
       <Route path ='/QueryList' >
-        <QueryList  queryList={queryList}/>
+        <QueryList  
+        queryList={queryList}
+          onUpdateQuery = {handleUpdatedQuery}
+        />
       </Route>
       
       <Route path ='/' >
-        <QueryForm/>
+        <QueryForm onAddQuery = {handleNewQuery}/>
       </Route>
     </Switch>
    </Router>
