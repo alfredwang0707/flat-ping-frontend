@@ -7,6 +7,7 @@ import './NavBar.css'
 import {IconContext} from 'react-icons/lib'
 
 
+
 function NavBar() {
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click)
@@ -36,7 +37,7 @@ window.addEventListener("resize", showButton)
         <div className="navbar-container container">
             <Link to='/' className="navbar-logo" onClick={closeMobileMenu}>
                 <FiMonitor className="navbar-icon"/>
-                Flat-Ping
+                    Flat-Ping
             </Link> 
                 <div className="menu-icon" onClick={handleClick}>
                     {click ? <FaTimes/> : <FaBars/>}
@@ -59,7 +60,8 @@ window.addEventListener("resize", showButton)
                             </Link>
                         ): (
                             <Link to='/sign-up' className="button-link">
-                                <Button buttonStyle="button-outline"
+                                <Button 
+                                buttonStyle="button-outline"
                                 buttonSize="button-mobile"
                                 onClick={closeMobileMenu}>
                                 Sign up

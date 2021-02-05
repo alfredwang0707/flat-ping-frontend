@@ -1,26 +1,17 @@
-
 import Query from './Query'
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 
-function QueryList() {
-    const [queryList, setQueryList] = useState([])
+const QueryList = ({queryList})=> {
 
-    const url = "http://localhost:3000/queries/"
-    useEffect(()=> {
-        fetch(url)
-        .then((r)=>r.json())
-        .then((queryLists) =>
-        setQueryList(queryList))
-    },[queryList])
-
-    const query = queryList.map((queryObj)=>(
+    console.log("querylist", queryList)
+    const singleQuery = queryList.map((queryObj)=>(
         <Query key={queryObj.id} query={queryObj} />
 
     ))
         
     return (
         <div>
-            <Query value ={query}/>
+            {singleQuery}
         </div>
     )
 }

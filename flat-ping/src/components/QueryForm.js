@@ -7,9 +7,26 @@ function QueryForm() {
 
     const handleSubmit = event => {
         event.preventDefault()
+        const formData = {
+            name,
+            email,
+            queryLink,
+            user_id: 1
+        }
+        console.log({formData})
+      fetch(`http://localhost:3000/queries`, {
+          method: "POST",
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData)
+        })
+          .then(r => r.json())
+          .then(data =>console.log(data))
       
     } 
 
+   
     return (
      <form className="query-form" onSubmit={handleSubmit}>
         <input
