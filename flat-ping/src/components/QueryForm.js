@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 
 function QueryForm({onAddQuery}) {
-    const [queryLink, setQueryLink] =useState("")
+    const [url, setUrl] =useState("")
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
 
@@ -10,7 +10,7 @@ function QueryForm({onAddQuery}) {
         const formData = {
             name,
             email,
-            queryLink,
+            url,
             user_id: 1
         }
         console.log({formData})
@@ -39,10 +39,10 @@ function QueryForm({onAddQuery}) {
         <input 
             type="text" 
             placeholder="Add a link to monitor"
-            value ={queryLink}
+            value ={url}
             name="text" 
             className="query-input"
-            onChange={(e)=> setQueryLink(e.target.value)}
+            onChange={(e)=> setUrl(e.target.value)}
             // onChange={(e)=> console.log(e.target.value)}
         />
         <input 

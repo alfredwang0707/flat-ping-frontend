@@ -21,7 +21,7 @@ function App() {
       setIsLoaded(true)
       })},[])
 
-  function handleUpdatedQuery(updatedQuery) {
+  function handleUpdateQuery(updatedQuery) {
     const updatedQueries = queryList.map((query)=> query.id===updatedQuery.id ? updatedQuery: query)
     setQueryList(updatedQueries)
   }
@@ -41,7 +41,7 @@ console.log("app.js", queryList)
       <Route path ='/QueryList' >
         <QueryList  
         queryList={queryList}
-          onUpdateQuery = {handleUpdatedQuery}
+          onUpdateQuery = {handleUpdateQuery}
         />
       </Route>
       
