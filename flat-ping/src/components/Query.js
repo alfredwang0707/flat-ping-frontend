@@ -1,9 +1,12 @@
 import React from 'react'
+import Details from './Details'
+import {useHistory} from  'react-router-dom'
 
-function Query({query, onUpdateQuery}) {
-
+function Query({query, onUpdateQuery, alterList, }) {
+    // console.log("query", alterList)
     const {name, url, id, status} = query
-
+    const history = useHistory()
+    
     function handleUpdateClick(){
 
         const updateStatus ={
@@ -21,6 +24,14 @@ function Query({query, onUpdateQuery}) {
         .then(onUpdateQuery)
     }
 
+    // function handleDetails(){
+        
+    //     return(
+    //         <div>
+    //             <Details />
+    //         </div>
+    //     )
+    // } 
 
     return (
         <div className="query-card-div">
@@ -28,10 +39,17 @@ function Query({query, onUpdateQuery}) {
            <div>{url}</div>
            <div>{id}</div>
            <div>{status}</div>
-           <button
+           
+           <button className="button-medium"
            onClick={handleUpdateClick}>
                Stop Monitoring
            </button>
+           <button className="button-medium"
+           onClick={()=> history.push(`/Details?id=${id}`)}
+           >
+            Details
+           </button>
+     
         </div>
     )
 }

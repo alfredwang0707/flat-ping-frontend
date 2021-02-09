@@ -1,14 +1,18 @@
 import Query from './Query'
 import React from 'react'
 
-const QueryList = ({queryList, onUpdateQuery})=> {
+const QueryList = ({queryList, onUpdateQuery, alterList})=> {
+    console.log("alterlist", alterList)
+    // console.log("querylist", queryList)
 
-    console.log("querylist", queryList)
-    const singleQuery = queryList.map((queryObj)=>(
+
+    const singleQuery = queryList.map((queryObj, index)=>(
         <Query 
         key={queryObj.id} 
         query={queryObj} 
-        onUpdateQuery = {onUpdateQuery}    
+        onUpdateQuery = {onUpdateQuery}  
+        alterList={alterList}  
+        index= {index}
         />
 
     ))

@@ -1,0 +1,32 @@
+.alterlist-div{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ width: 100%;
+ box-sizing: border-box;
+ padding: 15px 30px;
+ flex-wrap: wrap;
+
+}
+
+.alterlist-div img {
+    object-fit: contain;
+    max-width: 40%;
+    margin: 0 15px;
+    flex-grow: 1;
+}
+.alterlist-div img:last-child{
+    max-width: 100%;
+    flex-grow: 1;
+    margin: 15px auto;
+}
+@media only screen and (max-width:600px){
+    .alterlist-div{
+        flex-direction: column;
+
+    }
+    .alterlist-div img {
+        max-width: 90%;
+        margin: 15px auto;
+    }
+}

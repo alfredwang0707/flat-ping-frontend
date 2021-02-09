@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import './QueryForm.css'
 
 function QueryForm({onAddQuery}) {
     const [url, setUrl] =useState("")
@@ -11,7 +12,8 @@ function QueryForm({onAddQuery}) {
             name,
             email,
             url,
-            user_id: 1
+            user_id: 1,
+            status: "active"
         }
         console.log({formData})
       fetch(`http://localhost:3000/queries`, {
@@ -23,6 +25,9 @@ function QueryForm({onAddQuery}) {
         })
           .then(r => r.json())
           .then(onAddQuery)
+          setUrl("")
+          setEmail("")
+          setName("")
       
     } 
 
@@ -54,7 +59,7 @@ function QueryForm({onAddQuery}) {
             onChange={(e)=> setEmail(e.target.value)}
            
         />
-        <button className="button-small">
+        <button className="button-medium">
          New Query
         </button>
      </form>
