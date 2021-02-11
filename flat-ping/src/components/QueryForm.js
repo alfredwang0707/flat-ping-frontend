@@ -49,36 +49,43 @@ function QueryForm({onAddQuery}) {
 
    
     return (
-     <form className="query-form" onSubmit={handleSubmit}>
-        <input
-            type="text"
-            placeholder="Your name here"
-            value={name}
-            className="query-input"
-            onChange={(e)=> setName(e.target.value)}
-        />
-        <input 
-            type="text" 
-            placeholder="Add a link to monitor"
-            value ={url}
-            name="text" 
-            className="query-input"
-            onChange={(e)=> setUrl(e.target.value)}
-            // onChange={(e)=> console.log(e.target.value)}
-        />
-        <input 
-            type="text" 
-            placeholder="email for notifications"
-            value ={email}
-            name="text" 
-            className="query-input"
-            onChange={(e)=> setEmail(e.target.value)}
-           
-        />
-        <button className="button-medium">
-         Start Monitoring!
-        </button>
-     </form>
+        <>
+        <div className="form-container">
+            <form className="query-form" onSubmit={handleSubmit}>
+            <input
+                type="text"
+                placeholder="Your name here"
+                value={name}
+                className="query-input"
+                onChange={(e)=> setName(e.target.value)}
+            />
+            <input 
+                type="text" 
+                placeholder="Add a link to monitor"
+                value ={url}
+                name="text" 
+                className="query-input"
+                onChange={(e)=> setUrl(e.target.value)}
+                // onChange={(e)=> console.log(e.target.value)}
+            />
+            <input 
+                type="text" 
+                placeholder="email for notifications"
+                value ={email}
+                name="text" 
+                className="query-input"
+                onChange={(e)=> setEmail(e.target.value)}
+            
+            />
+            <button className="button-medium">
+            Start Monitoring! Current Frequency is Every [1] minute
+            </button>
+        </form>
+        </div>
+        
+  
+   </>
+ 
     )
 }
 

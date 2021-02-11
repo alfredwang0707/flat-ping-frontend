@@ -37,7 +37,7 @@ window.addEventListener("resize", showButton)
         <div className="navbar-container container">
             <Link to='/' className="navbar-logo" onClick={closeMobileMenu}>
                 <FiMonitor className="navbar-icon"/>
-                    Flat-Ping
+                Flat-Ping
             </Link> 
                 <div className="menu-icon" onClick={handleClick}>
                     {click ? <FaTimes/> : <FaBars/>}
@@ -56,7 +56,7 @@ window.addEventListener("resize", showButton)
                     <li className="nav-button">
                         {button ? (
                             <Link to='/sign-up' className="button-link">
-                                <Button buttonStyle="button-outline">Sign up</Button>
+                                <Button buttonStyle="button-outline">Log Out</Button>
                             </Link>
                         ): (
                             <Link to='/sign-up' className="button-link">
@@ -64,7 +64,7 @@ window.addEventListener("resize", showButton)
                                 buttonStyle="button-outline"
                                 buttonSize="button-mobile"
                                 onClick={closeMobileMenu}>
-                                Sign up
+                                Log Out
                                 </Button>
                             </Link>
                         )}

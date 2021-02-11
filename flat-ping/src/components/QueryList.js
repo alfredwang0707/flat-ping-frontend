@@ -2,6 +2,7 @@ import Query from './Query'
 import React from 'react'
 import './QueryList.css'
 
+
 const QueryList = ({queryList, onUpdateQuery, alterList})=> {
     console.log("alterlist", alterList)
     // console.log("querylist", queryList)

@@ -1,7 +1,7 @@
 import React from 'react'
-import Details from './Details'
+
 import {useHistory} from  'react-router-dom'
-import './Query.css'
+
 
 function Query({query, onUpdateQuery, alterList, }) {
     // console.log("query", alterList)
@@ -25,33 +25,46 @@ function Query({query, onUpdateQuery, alterList, }) {
         .then(onUpdateQuery)
     }
 
-    // function handleDetails(){
-        
-    //     return(
-    //         <div>
-    //             <Details />
-    //         </div>
-    //     )
-    // } 
+    const handleDeleteClick = (index) => {
+        console.log(index)
+    }
+   
+
 
     return (
         <div className="query-card-div">
-            <p>Name of the Website</p>
-           <div className="query-items">{name}</div>
-           <p>Link current monitoring</p>
+            
+                <p>Name of the Website</p>
+            
+             <div className="query-items">{name}</div>
+                <p>Link current monitoring</p>
            <div className="query-items">{url}</div>
-           <p>Current Status of the Link</p>
+                <p>Current Status of the Link</p>
            <div className="query-items">{status}</div>
            
-           <button className="button-medium"
-           onClick={handleUpdateClick}>
+           {/* <button className="button-medium"onClick={handleUpdateClick}>
                Stop Monitoring
            </button>
-           <button className="button-medium"
-           onClick={()=> history.push(`/Details?id=${id}`)}
-           >
+           <button className="button-medium" onClick={()=> history.push(`/Details?id=${id}`)}>
+                Details
+           </button> */}
+           <div></div>
+            <div class="details-button" onClick={handleUpdateClick}>
+            Stop Monitor
+            <i class="fa fa-warning"></i></div>
+           
+        
+            <div class="details-button" onClick={()=> history.push(`/Details?id=${id}`)}>
             Details
-           </button>
+            <i class="fa fa-question"></i></div>
+            <div></div>
+
+           <div></div>
+            <div class="delete-button">
+            Delete
+            <i class="fa fa-times"></i></div>
+            <div></div>
+
      
         </div>
     )

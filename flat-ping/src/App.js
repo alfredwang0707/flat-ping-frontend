@@ -6,6 +6,11 @@ import {BrowserRouter as Router,Switch, Route} from 'react-router-dom'
 import QueryForm from './components/QueryForm'
 import QueryList from './components/QueryList'
 import Details from './components/Details'
+import { SkipNavLink, SkipNavContent } from "@reach/skip-nav";
+import "@reach/skip-nav/styles.css";
+import Footer from './components/Footer'
+import Intro from './components/Intro'
+
 
 
 function App() {
@@ -42,15 +47,15 @@ function App() {
       setIsLoaded(true)
       })},[])
 
-     
-
-  
 
 if (!isloaded) return <h2> Loading...</h2>
 // console.log("app.js", queryList)
   return ( 
+    <>
   
    <Router>
+   <SkipNavLink />
+   <SkipNavContent />
     <NavBar/>
     <Switch>
       <Route path ='/QueryList' >
@@ -66,15 +71,17 @@ if (!isloaded) return <h2> Loading...</h2>
         alterList ={alterList}
         />
       </Route>
-      
+    
       <Route path ='/' >
         <QueryForm onAddQuery = {handleNewQuery}/>
-      
+        <Intro/>
       </Route>
     </Switch>
    </Router>
+   
+   <Footer/>
      
-  
+  </>
   );
 }
 
