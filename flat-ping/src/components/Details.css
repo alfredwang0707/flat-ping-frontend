@@ -6,12 +6,13 @@
  box-sizing: border-box;
  padding: 15px 30px;
  flex-wrap: wrap;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
 
 .alterlist-div img {
     object-fit: contain;
-    max-width: 40%;
+    max-width: 30%;
     margin: 0 15px;
     flex-grow: 1;
 }

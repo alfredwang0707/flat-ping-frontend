@@ -1,6 +1,7 @@
 import React from 'react'
 import Details from './Details'
 import {useHistory} from  'react-router-dom'
+import './Query.css'
 
 function Query({query, onUpdateQuery, alterList, }) {
     // console.log("query", alterList)
@@ -35,10 +36,12 @@ function Query({query, onUpdateQuery, alterList, }) {
 
     return (
         <div className="query-card-div">
-           <div>{name}</div>
-           <div>{url}</div>
-           <div>{id}</div>
-           <div>{status}</div>
+            <p>Name of the Website</p>
+           <div className="query-items">{name}</div>
+           <p>Link current monitoring</p>
+           <div className="query-items">{url}</div>
+           <p>Current Status of the Link</p>
+           <div className="query-items">{status}</div>
            
            <button className="button-medium"
            onClick={handleUpdateClick}>

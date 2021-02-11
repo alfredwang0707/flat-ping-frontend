@@ -1,5 +1,6 @@
 import Query from './Query'
 import React from 'react'
+import './QueryList.css'
 
 const QueryList = ({queryList, onUpdateQuery, alterList})=> {
     console.log("alterlist", alterList)
@@ -8,6 +9,7 @@ const QueryList = ({queryList, onUpdateQuery, alterList})=> {
 
     const singleQuery = queryList.map((queryObj, index)=>(
         <Query 
+        
         key={queryObj.id} 
         query={queryObj} 
         onUpdateQuery = {onUpdateQuery}  
@@ -18,7 +20,7 @@ const QueryList = ({queryList, onUpdateQuery, alterList})=> {
     ))
         
     return (
-        <div>
+        <div className="query-container">
             {singleQuery}
         </div>
     )

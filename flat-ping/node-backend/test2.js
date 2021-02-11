@@ -3,9 +3,25 @@ const fs = require('fs');
 const PNG = require('pngjs').PNG;
 const pixelmatch = require('pixelmatch');
 const { Sequelize, DataTypes } = require('sequelize');
+const fetch = require('node-fetch');
 const sequelize = new Sequelize({
   dialect: 'sqlite',
   storage: '../../../flat-ping-rails-backend/flat-ping/db/development.sqlite3'
+})
+
+
+
+const User = sequelize.define('User',{ 
+  id: {
+  type: DataTypes.INTEGER,
+  primaryKey: true
+},
+name: DataTypes.STRING,
+email: DataTypes.STRING,
+created_at: DataTypes.TIME,
+updated_at: DataTypes.TIME
+}, {
+timestamps: false,
 })
 
 const Query = sequelize.define('Query', {
@@ -24,6 +40,12 @@ const Query = sequelize.define('Query', {
   timestamps: false
 })
 
+User.hasMany(Query, {
+  foreignKey: 'user_id'
+});
+Query.belongsTo(User, {
+  foreignKey: 'user_id'
+});
 
 const Alter = sequelize.define('Alter', {
   id: {
@@ -68,9 +90,12 @@ const testConnection = async() => {
   try {
     await sequelize.authenticate();
     console.log('Connection has been established successfully.');
-    const queries = await Query.findAll({ where: {
-      status: "active"
-    }});
+    const queries = await Query.findAll({
+      where: {
+        status: "active"
+      },
+      include: User
+    });
     
     // await Query.update({ name: "testing google"}, { where: {
     //   id: 1
@@ -99,7 +124,6 @@ const testConnection = async() => {
           console.log("difference!")
 
           fs.writeFileSync(`../public/${diffImagePath}`, PNG.sync.write(imageDiff))
-
         // await sequelize.authenticate()
         // console.log('connection success')
         // const Alters = await Alter.findAll()
@@ -115,7 +139,28 @@ const testConnection = async() => {
           }, {
             timestamps: false
           })
-
+          
+          var emailData = {
+            service_id: 'service_t977a4l',
+            template_id: 'template_kygf2vn',
+            user_id: 'user_uSdC48xNgCDYxIKKNtYFr',
+            template_params: {
+              name: query.User.name,
+              email: query.User.email
+            }
+          };
+          
+          await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+            method: 'POST',
+            body: JSON.stringify(emailData),
+            headers: { 'Content-Type': 'application/json' },
+          })
+          .then(res => {
+            console.log('success emailing to ', query.User.email)
+          })
+          .catch(err => {
+            console.log('error emailing', err)
+          })
         } 
       }
     
@@ -128,7 +173,11 @@ const testConnection = async() => {
     console.error('Unable to connect to the database:', error);
   }
 }
-testConnection();
+
+setInterval(() => {
+  testConnection();
+}, 60000)
+
 const getLatestScreenshot = async function(url, path) {
   const browser1 = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']});
   const page2 = await browser1.newPage();

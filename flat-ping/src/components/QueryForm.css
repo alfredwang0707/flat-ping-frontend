@@ -4,11 +4,17 @@ form {
     height: 450px;
     margin: auto;
     position: relative;
+    background-image: url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm23-bb-09_1.jpg?w=1300&dpr=1&fit=default&crop=default&q=80&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=368d3af11e344cb803dad76ca537b950');
+    display: flex;
+    flex-direction: column;
 
 }
+
+
 input{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
 }
+

@@ -7,6 +7,7 @@ import QueryForm from './components/QueryForm'
 import QueryList from './components/QueryList'
 import Details from './components/Details'
 
+
 function App() {
 
   const [queryList, setQueryList] = useState([])
@@ -48,6 +49,7 @@ function App() {
 if (!isloaded) return <h2> Loading...</h2>
 // console.log("app.js", queryList)
   return ( 
+  
    <Router>
     <NavBar/>
     <Switch>
@@ -67,10 +69,11 @@ if (!isloaded) return <h2> Loading...</h2>
       
       <Route path ='/' >
         <QueryForm onAddQuery = {handleNewQuery}/>
+      
       </Route>
     </Switch>
    </Router>
-      
+     
   
   );
 }

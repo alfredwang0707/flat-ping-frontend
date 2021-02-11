@@ -24,9 +24,14 @@ function Details({alterList}) {
                         <div className="alterlist-div"
                         key = {index}
                         >
-                            <img src={item.oldImagePath} alt="old pic"/>
-                            <img src={item.newImagePath} alt="new pic"/>
-                            <img src={item.diffImagePath} alt="diff pic"/>
+                            
+                                <p>Before Picture</p>
+                                <img src={item.oldImagePath} alt="old pic"/>
+                                <p>After Picture</p>
+                                <img src={item.newImagePath} alt="new pic"/>
+                                 <p>Picture of the differnce</p>
+                                <img src={item.diffImagePath} alt="diff pic"/>
+                           
 
                         </div>
                     )}
