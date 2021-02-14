@@ -26,12 +26,28 @@ function Intro() {
             </div>
         </div>
 
+            <p className="use-case">Thousands of use cases</p>
         <div className="cases-container">
-            <p>Thousands of use cases</p>
             <div className="cases-container-item">
-                Monitor Vaccine Availability
+                <img src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd5ZYjSK9fE8tT29y57rBGLap7-XanJpJYwA&usqp=CAU" alt="vaccine"></img>
+               <h2> Monitor Vaccine Availability</h2>
             </div>
-            <img src ="vaccine"></img>
+            <div className="cases-container-item">
+                <img src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRflvwaORfZQ-Uf5GZ1XAXsaR5jRRfnGmdYWQ&usqp=CAU" alt="job"></img>
+               <h2> Job Hunting Career page Monitoring</h2>
+            </div>
+            <div className="cases-container-item">
+                <img src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDMm3RyGTF7JOcWxdaaYwb6bYQqicegBKaGw&usqp=CAU" alt="quality"></img>
+               <h2> Quality Assurance,affiliates,SEO </h2>
+            </div>
+            <div className="cases-container-item">
+                <img src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVyPKTfNpcc8sHxNa5cd2nbbtVjeM2d-Zmpw&usqp=CAU" alt="price"></img>
+               <h2> Price Monitoring</h2>
+            </div>
+            <div className="cases-container-item">
+                <img src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQqpPb3PjCv34NBjP3lrIXS1gc7gvMkFjwag&usqp=CAU" alt="legal"></img>
+               <h2> Regulation and Compliance</h2>
+            </div>
         </div>
         </>
     )
