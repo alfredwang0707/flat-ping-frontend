@@ -7,7 +7,6 @@ import QueryForm from './components/QueryForm'
 import QueryList from './components/QueryList'
 import Details from './components/Details'
 import { SkipNavLink, SkipNavContent } from "@reach/skip-nav";
-import "@reach/skip-nav/styles.css";
 import Footer from './components/Footer'
 import Intro from './components/Intro'
 
@@ -37,6 +36,11 @@ function App() {
     setQueryList([...queryList, newQuery])
   }
 
+  function handleDeleteQuery(deletedQuery) {
+    const updatedQueries = queryList.filter((query) => query.id !== deletedQuery.id);
+    setQueryList(updatedQueries)
+  }
+
   /*   fetching initial alter table */ 
   useEffect(()=> {
       fetch("http://localhost:3000/alters/")
@@ -54,14 +58,16 @@ if (!isloaded) return <h2> Loading...</h2>
     <>
   
    <Router>
-   <SkipNavLink />
-   <SkipNavContent />
+   
+   
+    <SkipNavLink />
     <NavBar/>
     <Switch>
       <Route path ='/QueryList' >
         <QueryList  
         queryList={queryList}
         onUpdateQuery = {handleUpdateQuery}
+        onDeleteQuery = {handleDeleteQuery}
         alterList= {alterList}
         />
       </Route>
@@ -71,8 +77,10 @@ if (!isloaded) return <h2> Loading...</h2>
         alterList ={alterList}
         />
       </Route>
+      
     
       <Route path ='/' >
+        <SkipNavContent />
         <QueryForm onAddQuery = {handleNewQuery}/>
         <Intro/>
       </Route>

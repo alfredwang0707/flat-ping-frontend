@@ -3,7 +3,7 @@ import React from 'react'
 import './QueryList.css'
 
 
-const QueryList = ({queryList, onUpdateQuery, alterList})=> {
+const QueryList = ({queryList, onUpdateQuery, onDeleteQuery, alterList})=> {
     console.log("alterlist", alterList)
     // console.log("querylist", queryList)
 
@@ -14,6 +14,7 @@ const QueryList = ({queryList, onUpdateQuery, alterList})=> {
         key={queryObj.id} 
         query={queryObj} 
         onUpdateQuery = {onUpdateQuery}  
+        onDeleteQuery = {onDeleteQuery}
         alterList={alterList}  
         index= {index}
         />

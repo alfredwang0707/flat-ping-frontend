@@ -13,15 +13,15 @@ const sequelize = new Sequelize({
 
 const User = sequelize.define('User',{ 
   id: {
-  type: DataTypes.INTEGER,
-  primaryKey: true
-},
-name: DataTypes.STRING,
-email: DataTypes.STRING,
-created_at: DataTypes.TIME,
-updated_at: DataTypes.TIME
-}, {
-timestamps: false,
+    type: DataTypes.INTEGER,
+    primaryKey: true
+  },
+  name: DataTypes.STRING,
+  email: DataTypes.STRING,
+  created_at: DataTypes.TIME,
+  updated_at: DataTypes.TIME
+  }, {
+  timestamps: false,
 })
 
 const Query = sequelize.define('Query', {

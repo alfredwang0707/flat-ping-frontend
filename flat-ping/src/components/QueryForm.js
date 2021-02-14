@@ -11,8 +11,10 @@ function QueryForm({onAddQuery}) {
         event.preventDefault()
         const emailFormValues = {
             email,
-            name
+            name,
+            url
         };
+        // TODO welcome email template
         emailjs.send('service_t977a4l', 'template_kygf2vn', emailFormValues, 'user_uSdC48xNgCDYxIKKNtYFr')
         .then((result) => { 
             console.log('email sent', result.text);
