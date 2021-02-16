@@ -37,8 +37,6 @@ function Query({query, onUpdateQuery, onDeleteQuery, alterList, }) {
             })
         } // do nothing if no
     }
-   
-
 
     return (
         <>
@@ -46,7 +44,6 @@ function Query({query, onUpdateQuery, onDeleteQuery, alterList, }) {
             <p>Name: {name}</p>
             <p>Url: {url}</p>
             <p>Monitor Status: {status}</p>
-            
             <div style={{ paddingTop: '15px' }}>
                 <div class="details-button" onClick={handleUpdateClick}>
                     { status === 'active' ? 'Stop' : 'Start' } Monitor
@@ -61,11 +58,8 @@ function Query({query, onUpdateQuery, onDeleteQuery, alterList, }) {
                     <i class="fa fa-times"></i>
                 </div>
             </div>
-    
-
-     
         </div>
-        <button>Back</button>
+       
         </>
     )
 }

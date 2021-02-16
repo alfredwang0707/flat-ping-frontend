@@ -141,7 +141,7 @@ const testConnection = async() => {
           })
           
           var emailData = {
-            service_id: 'service_t977a4l',
+            service_id: 'service_3444ry9',
             template_id: 'template_kygf2vn',
             user_id: 'user_uSdC48xNgCDYxIKKNtYFr',
             template_params: {

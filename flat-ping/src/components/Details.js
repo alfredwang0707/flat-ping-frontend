@@ -1,6 +1,7 @@
 import React,{ useState, useEffect} from 'react'
 import {useLocation} from 'react-router-dom'
 import './Details.css' 
+// import ModalImage from "react-modal-image"
 
 function Details({alterList, queryList}) {
     const useQueryParams=() => {
@@ -9,7 +10,7 @@ function Details({alterList, queryList}) {
     const queryParam = useQueryParams()
     useEffect(() => {
         setId(parseInt(queryParam.get("id")))
-    }, [])
+    }, [queryParam])
 
     const [id,setId] = useState()
 

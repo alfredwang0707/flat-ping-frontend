@@ -15,7 +15,7 @@ function QueryForm({onAddQuery}) {
             url
         };
         // TODO welcome email template
-        emailjs.send('service_t977a4l', 'template_cbmwvq4', emailFormValues, 'user_uSdC48xNgCDYxIKKNtYFr')
+        emailjs.send('service_3444ry9', 'template_cbmwvq4', emailFormValues, 'user_uSdC48xNgCDYxIKKNtYFr')
         .then((result) => { 
             console.log('email sent', result.text);
         }, (error) => {
