@@ -19,6 +19,9 @@ function App() {
   const [alterList, setAlterList] = useState([])
 
   const url = "http://localhost:3000/queries/"
+
+  // TODO data fetching should be moved to dashboard/details pages
+  // data needs to be stored in somewhere central like redux or a hook instance
   useEffect(()=> {
       fetch(url)
       .then((r)=>r.json())
@@ -44,11 +47,11 @@ function App() {
   /*   fetching initial alter table */ 
   useEffect(()=> {
       fetch("http://localhost:3000/alters/")
-      .then((r)=>r.json())
-      .then(alterArray =>{
-      console.log("app.js",alterArray)
-      setAlterList(alterArray)
-      setIsLoaded(true)
+        .then((r)=>r.json())
+        .then(alterArray =>{
+          console.log("app.js",alterArray)
+          setAlterList(alterArray)
+          setIsLoaded(true)
       })},[])
 
 
@@ -65,16 +68,17 @@ if (!isloaded) return <h2> Loading...</h2>
     <Switch>
       <Route path ='/QueryList' >
         <QueryList  
-        queryList={queryList}
-        onUpdateQuery = {handleUpdateQuery}
-        onDeleteQuery = {handleDeleteQuery}
-        alterList= {alterList}
+          queryList={queryList}
+          onUpdateQuery = {handleUpdateQuery}
+          onDeleteQuery = {handleDeleteQuery}
+          alterList= {alterList}
         />
       </Route>
 
       <Route path='/Details'>
         <Details 
-        alterList ={alterList}
+          alterList ={alterList}
+          queryList ={queryList}
         />
       </Route>
       

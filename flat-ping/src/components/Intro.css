@@ -9,24 +9,28 @@
    }
 
 .about-us-title h2{
-    color: #7c795d; 
+    color: #605c6d; 
     font-family: 'Trocchi', serif; 
-    font-size: 45px; 
+    font-size: 30px; 
     font-weight: normal; 
     line-height: 48px; 
     margin: 0; 
-    
+    margin-top: 36px;
+    margin-bottom: 36px;
     display: grid;
     place-items: center;
+    
 }
 
 .about-us-title h1 {
     color: #111; 
     font-family: 'Helvetica Neue', 
-    sans-serif; font-size: 60px;
+    sans-serif; font-size: 45px;
      font-weight: bold; 
      letter-spacing: -1px; 
      line-height: 1; 
+     padding-left: 100px;
+     padding-right: 100px;
      text-align: center
 }
 
@@ -41,6 +45,11 @@
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
+
+}
+
+.about-us-item h2 {
+    font-size: 36px;
 }
 
 .use-case  {
@@ -56,27 +65,44 @@
      padding: 30px;
 }
 .cases-container{
-    max-width: 800px;
-    max-height: 800px;
-  
+    max-width: 1000px;
+    flex-wrap: wrap;
     margin: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
-    
+    padding: 30px 100px 100px 100px;
 }
-
 
 .cases-container-item{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    color: darkgray
+    color: black;  
 }
 .cases-container-item img {
     width: 100px;
     height: 100px;
-    object-fit: cover;
-    
+    object-fit: contain;  
 }
+
+.cases-container-item h2 {
+    text-align: center;
+    object-fit: contain;
+    font-size: 16px;
+    align-items: center;
+}
+
+.circle { 
+    width: 100px;
+    height: 270px;
+    background: rgb(135, 191, 200); 
+    -moz-border-radius: 65px; 
+    -webkit-border-radius: 65px; 
+    border-radius: 65px;
+    z-index: -1;
+    padding: 60px;
+   
+
+ }
 

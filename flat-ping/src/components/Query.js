@@ -26,39 +26,41 @@ function Query({query, onUpdateQuery, onDeleteQuery, alterList, }) {
     }
 
     const handleDeleteClick = () => {
-        console.log("delete click", "query.js")
-       fetch(`http://localhost:3000/queries/${id}`,{
-           method: "DELETE",
-       })
-
-    // Promise.resolve()
-     .then(() => {
-        console.log(query)
-        onDeleteQuery(query);
-     })
+        if (window.confirm('Are you sure you wish to delete this item?')) {
+            fetch(`http://localhost:3000/queries/${id}`,{
+                method: "DELETE",
+            })
+            // Promise.resolve()
+            .then(() => {
+                console.log(query)
+                onDeleteQuery(query);
+            })
+        } // do nothing if no
     }
    
 
 
     return (
         <div className="query-card-div">
-            <p>Name of the Website</p>
-            <div className="query-items">{name}</div>
-                <p>Link current monitoring</p>
-           <div className="query-items">{url}</div>
-                <p>Current Status of the Link</p>
-           <div className="query-items">{status}</div>
-            <div></div>
-            <div class="details-button" onClick={handleUpdateClick}>
-            { status === 'active' ? 'Stop' : 'Start' } Monitor
-            <i class="fa fa-warning"></i></div>          
-            <div class="details-button" onClick={()=> history.push(`/Details?id=${id}`)}>
-            Details
-            <i class="fa fa-question"></i></div>
-            <div class="delete-button" onClick={handleDeleteClick}>
-            Delete
-            <i class="fa fa-times"></i></div>
-            <div></div>
+            <p>Name: {name}</p>
+            <p>Url: {url}</p>
+            <p>Monitor Status: {status}</p>
+            
+            <div style={{ paddingTop: '15px' }}>
+                <div class="details-button" onClick={handleUpdateClick}>
+                    { status === 'active' ? 'Stop' : 'Start' } Monitor
+                    <i class="fa fa-warning"></i>
+                </div>          
+                <div class="details-button" onClick={()=> history.push(`/Details?id=${id}`)}>
+                    Details
+                    <i class="fa fa-question"></i>
+                </div>
+                <div class="delete-button" onClick={handleDeleteClick}>
+                    Delete
+                    <i class="fa fa-times"></i>
+                </div>
+            </div>
+    
 
      
         </div>

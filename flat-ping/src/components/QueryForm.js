@@ -15,7 +15,7 @@ function QueryForm({onAddQuery}) {
             url
         };
         // TODO welcome email template
-        emailjs.send('service_t977a4l', 'template_kygf2vn', emailFormValues, 'user_uSdC48xNgCDYxIKKNtYFr')
+        emailjs.send('service_t977a4l', 'template_cbmwvq4', emailFormValues, 'user_uSdC48xNgCDYxIKKNtYFr')
         .then((result) => { 
             console.log('email sent', result.text);
         }, (error) => {
@@ -52,6 +52,7 @@ function QueryForm({onAddQuery}) {
    
     return (
         <>
+        <h1 className="intro-title">We monitor website changes for you</h1>
         <div className="form-container">
             <form className="query-form" onSubmit={handleSubmit}>
             <input
