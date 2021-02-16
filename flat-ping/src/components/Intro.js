@@ -9,7 +9,7 @@ function Intro() {
         <>
         <div className="about-us-title">
            
-            <h2>Simple yet powerful change analytics</h2>
+            
         </div>
         <div className="about-us">
             <div className="about-us-item">

@@ -9,7 +9,8 @@ const QueryList = ({queryList, onUpdateQuery, onDeleteQuery, alterList})=> {
 
 
     const singleQuery = queryList.map((queryObj, index)=>(
-        <Query 
+     
+     <Query 
         
         key={queryObj.id} 
         query={queryObj} 
@@ -18,7 +19,8 @@ const QueryList = ({queryList, onUpdateQuery, onDeleteQuery, alterList})=> {
         alterList={alterList}  
         index= {index}
         />
-
+        
+    
     ))
         
     return (

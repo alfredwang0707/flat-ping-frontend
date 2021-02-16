@@ -1,5 +1,7 @@
 .navbar {
-    background-color: rgb(189, 160, 216);
+    /* background-color: rgb(189, 160, 216); */
+    background-image: url(https://image.freepik.com/free-vector/technology-banner-background-with-hexagonal-shapes-text-space_1017-22589.jpg);
+    background-size: cover;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -57,7 +59,7 @@
   }
   
   .nav-item:hover {
-    border-bottom: 2px solid #f00946;
+    border-bottom: 6px solid #f00946;
   }
   
   .nav-links {

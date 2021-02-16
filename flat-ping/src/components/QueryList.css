@@ -25,10 +25,10 @@
     box-shadow: cornsilk;
 }
 .query-card-div p {
-    font-family: Arial, Helvetica, sans-serif
+    font-family: American Typewriter, serif
 }
 .query-card-div:hover {
-    background-color: rgba(97, 32, 134, 0.561);
+    background-color: rgba(193, 157, 229, 0.561);
     opacity: 0.9;
 }
 

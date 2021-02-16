@@ -41,6 +41,7 @@ function Query({query, onUpdateQuery, onDeleteQuery, alterList, }) {
 
 
     return (
+        <>
         <div className="query-card-div">
             <p>Name: {name}</p>
             <p>Url: {url}</p>
@@ -64,6 +65,8 @@ function Query({query, onUpdateQuery, onDeleteQuery, alterList, }) {
 
      
         </div>
+        <button>Back</button>
+        </>
     )
 }
 
