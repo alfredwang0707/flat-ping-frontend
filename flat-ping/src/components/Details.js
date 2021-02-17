@@ -50,6 +50,7 @@ function Details({alterList, queryList}) {
                                     <p>Before Picture</p>
                                     <img src={item.oldImagePath} alt="old pic"/>
                                 </div>
+                           
                                 <div className="alter-list-div-items">
                                     <p>After Picture</p>
                                     <img src={item.newImagePath} alt="new pic"/>

@@ -21,16 +21,17 @@ input{
 h1 {
     color: #111; 
     font-family: 'Helvetica Neue', 
-    sans-serif; font-size: 45px;
+    sans-serif; font-size: 100px;
      font-weight: bold; 
      letter-spacing: -1px; 
      line-height: 1; 
      padding-left: 130px;
      padding-right: 130px;
      text-align: center;
-     padding-top: 30px;
+     padding-top: 50px;
      padding-bottom: 30px;
-     text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
+     /* text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15); */
+
      
 }
 

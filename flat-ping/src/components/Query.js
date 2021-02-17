@@ -41,21 +41,27 @@ function Query({query, onUpdateQuery, onDeleteQuery, alterList, }) {
     return (
         <>
         <div className="query-card-div">
-            <p>Name: {name}</p>
-            <p>Url: {url}</p>
-            <p>Monitor Status: {status}</p>
+            <div className="query-card-div-title">
+                <p>Name: {name}</p>
+                <p>Url: {url}</p>
+                <p>Monitor Status: {status}</p>
+            </div>
             <div style={{ paddingTop: '15px' }}>
-                <div class="details-button" onClick={handleUpdateClick}>
-                    { status === 'active' ? 'Stop' : 'Start' } Monitor
-                    <i class="fa fa-warning"></i>
-                </div>          
-                <div class="details-button" onClick={()=> history.push(`/Details?id=${id}`)}>
-                    Details
-                    <i class="fa fa-question"></i>
-                </div>
-                <div class="delete-button" onClick={handleDeleteClick}>
-                    Delete
-                    <i class="fa fa-times"></i>
+                <div className="buttons-container">
+                    <div class="details-button" onClick={handleUpdateClick}>
+                        { status === 'active' ? 'Stop' : 'Start' } Monitor
+                        <i class="fa fa-warning"></i>
+                    </div>   
+                    
+                    <div class="details-button" onClick={()=> history.push(`/Details?id=${id}`)}>
+                        Details
+                        <i class="fa fa-question"></i>
+                    </div>
+                
+                    <div class="delete-button" onClick={handleDeleteClick}>
+                        Delete
+                        <i class="fa fa-times"></i>
+                    </div>
                 </div>
             </div>
         </div>
