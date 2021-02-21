@@ -7,8 +7,9 @@ This is an app I've worked on to solidify my understanding of various skills I'v
 In summary, this app allows a user to create alerts, and the user will be notified if there is a change made on the monitored url. As time was constrained, many features were considered, but remain on the backlog for continuous development. The items planned and worked on are on a [Trello board](https://trello.com/b/P9oCC8aK/simple-project-board).
 
 ## Rails Backend
-* created and updated several models based on current and expected functionality
-* updated CRUD functionality
+* created and updated several data models based on current and expected functionality
+*  CRUD functionalities for main app
+* architect data schema structure
 
 ## Node.js Backend
 * created a Node.js backend that continuously check for user queries, fetch a screenshot of the page, compares it against the last known screenshot, calculates the difference threshold (currently any difference), and if different, sends an email to the user along with saving the images and change events into the database
