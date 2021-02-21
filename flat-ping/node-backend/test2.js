@@ -8,9 +8,18 @@ const sequelize = new Sequelize({
   dialect: 'sqlite',
   storage: '../../../flat-ping-rails-backend/flat-ping/db/development.sqlite3'
 })
+// if there is no old image, save the image file name to the query
+// Simple UPDATE queries 
+// query.imageName = "1-20210206181930"
+// filePath = "../images/"
+// actualFileName = filePath + query.imageName + ".jpg"
+// newFileName = `${query.id}-${Date.now()}`
+// save new picture to newFileName, if different, save newFileName into query;
+// `images/${query.id}-${time}.jpg`
+// time = Date.now() // 1612653638960
 
 
-
+//establish model & relationships
 const User = sequelize.define('User',{ 
   id: {
     type: DataTypes.INTEGER,

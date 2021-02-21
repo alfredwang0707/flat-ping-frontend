@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import './QueryForm.css'
 import emailjs from 'emailjs-com'
 
+
 function QueryForm({onAddQuery}) {
     const [url, setUrl] =useState("")
     const [name, setName] = useState("") 
@@ -61,6 +62,7 @@ function QueryForm({onAddQuery}) {
                 value={name}
                 className="query-input"
                 onChange={(e)=> setName(e.target.value)}
+                required
             />
             <input 
                 type="text" 
@@ -69,6 +71,7 @@ function QueryForm({onAddQuery}) {
                 name="text" 
                 className="query-input"
                 onChange={(e)=> setUrl(e.target.value)}
+                required
                 // onChange={(e)=> console.log(e.target.value)}
             />
             <input 
@@ -78,6 +81,7 @@ function QueryForm({onAddQuery}) {
                 name="text" 
                 className="query-input"
                 onChange={(e)=> setEmail(e.target.value)}
+                required
             
             />
             <button className="button-medium">

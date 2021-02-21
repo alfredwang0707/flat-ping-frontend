@@ -9,6 +9,7 @@ form {
     flex-direction: column;
     background-size: 400px, 100px;
     background-repeat: no-repeat;
+   
 }
 
 
@@ -17,6 +18,7 @@ input{
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
+  
 }
 h1 {
     color: #111; 
@@ -34,5 +36,13 @@ h1 {
 
      
 }
+input:required {
+    border-color: #800000;
+    border-width: 2px;
+  }
+  
+  input:required:invalid {
+    border-color: #c00000;
+  }
 
-
+  
