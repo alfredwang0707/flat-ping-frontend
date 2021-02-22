@@ -52,7 +52,8 @@ researched many libraries before settling on these
 3. An email alert will be send to you to check the change manually
 4. Go to the dashboard to manage queries and view alert differences
 
-
+![Flat-ping](demo/detailsdemo.gif)
+![Flat-ping](demo/formdemo.gif)
 [puppeteer]: <https://developers.google.com/web/tools/puppeteer>
 
 [pixel-match]: <https://github.com/mapbox/pixelmatch>
