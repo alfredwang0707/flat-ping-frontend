@@ -9,7 +9,7 @@ import Details from './components/Details'
 import { SkipNavLink, SkipNavContent } from "@reach/skip-nav";
 import Footer from './components/Footer'
 import Intro from './components/Intro'
-
+import SignUp from "./components/SignUp"
 
 
 function App() {
@@ -19,6 +19,8 @@ function App() {
   const [alterList, setAlterList] = useState([])
 
   const url = "http://localhost:3000/queries/"
+  const [currentUser, setCurrentUser] = useState(null)
+
 
   // TODO data fetching should be moved to dashboard/details pages
   // data needs to be stored in somewhere central like redux or a hook instance
@@ -64,7 +66,7 @@ if (!isloaded) return <h2> Loading...</h2>
    
    
     <SkipNavLink />
-    <NavBar/>
+    <NavBar currentUser={currentUser}/>
     <Switch>
       <Route path ='/QueryList' >
         <QueryList  
@@ -73,6 +75,9 @@ if (!isloaded) return <h2> Loading...</h2>
           onDeleteQuery = {handleDeleteQuery}
           alterList= {alterList}
         />
+      </Route>
+      <Route path="/signup">
+        <SignUp />
       </Route>
 
       <Route path='/Details'>

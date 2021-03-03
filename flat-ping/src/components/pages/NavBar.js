@@ -7,8 +7,7 @@ import './NavBar.css'
 import {IconContext} from 'react-icons/lib'
 
 
-
-function NavBar() {
+function NavBar({currentUser, setCurrentUser}) {
     const [click, setClick] = useState(false)
     const handleClick = () => setClick(!click)
     
@@ -28,6 +27,10 @@ function NavBar() {
     },[])
 
 window.addEventListener("resize", showButton)
+function handleLogout() {
+    setCurrentUser(null);
+    localStorage.removeItem("token");
+  }
 
 
     return (
@@ -63,12 +66,14 @@ window.addEventListener("resize", showButton)
                                 <Button 
                                 buttonStyle="button-outline"
                                 buttonSize="button-mobile"
-                                onClick={closeMobileMenu}>
+                                
+                                onClick={handleLogout}>
                                 Log Out
                                 </Button>
                             </Link>
                         )}
                     </li>
+              
                 </ul>
         </div>
     </nav>

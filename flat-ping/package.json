@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^12.1.10",
     "emailjs-com": "^2.6.4",
     "node-fetch": "^2.6.1",
+    "node-mailjet": "^3.3.1",
     "node-sass": "^5.0.0",
     "pixelmatch": "^5.2.1",
     "pngjs": "^6.0.0",
