@@ -2,7 +2,7 @@
 import React, {useEffect, useState} from 'react'
 import './App.css'
 import NavBar from './components/pages/NavBar'
-import {BrowserRouter as Router,Switch, Route} from 'react-router-dom'
+import {BrowserRouter as Router,Switch, Route,Redirect} from 'react-router-dom'
 import QueryForm from './components/QueryForm'
 import QueryList from './components/QueryList'
 import Details from './components/Details'
@@ -10,6 +10,8 @@ import { SkipNavLink, SkipNavContent } from "@reach/skip-nav";
 import Footer from './components/Footer'
 import Intro from './components/Intro'
 import SignUp from "./components/SignUp"
+import Login from "./components/Login";
+import Profile from './components/Profile'
 
 
 function App() {
@@ -32,6 +34,25 @@ function App() {
       setIsLoaded(true)
       })},[])
 
+  useEffect(() => {
+  
+        const token = localStorage.getItem("token")
+        if (token) {
+          fetch("http://localhost:3000/details", {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          })
+            .then((r) => r.json())
+            .then((user) => {
+            setCurrentUser(user)
+            })
+        }
+      }, [])
+    
+      console.log({ currentUser })
+
   function handleUpdateQuery(updatedQuery) {
     const updatedQueries = queryList.map((query)=> query.id===updatedQuery.id ? updatedQuery: query)
     setQueryList(updatedQueries)
@@ -42,7 +63,7 @@ function App() {
   }
 
   function handleDeleteQuery(deletedQuery) {
-    const updatedQueries = queryList.filter((query) => query.id !== deletedQuery.id);
+    const updatedQueries = queryList.filter((query) => query.id !== deletedQuery.id)
     setQueryList(updatedQueries)
   }
 
@@ -70,6 +91,8 @@ if (!isloaded) return <h2> Loading...</h2>
     <Switch>
       <Route path ='/QueryList' >
         <QueryList  
+          currentUser={currentUser} 
+          setCurrentUser={setCurrentUser}
           queryList={queryList}
           onUpdateQuery = {handleUpdateQuery}
           onDeleteQuery = {handleDeleteQuery}
@@ -79,6 +102,16 @@ if (!isloaded) return <h2> Loading...</h2>
       <Route path="/signup">
         <SignUp />
       </Route>
+      <Route path="/login">
+        <Login currentUser={currentUser} setCurrentUser={setCurrentUser}/>
+      </Route>
+      <Route path="/profile">
+            {currentUser ? (
+              <Profile currentUser={currentUser} />
+            ) : (
+              <Redirect to="/" />
+            )}
+          </Route>
 
       <Route path='/Details'>
         <Details 
@@ -92,14 +125,15 @@ if (!isloaded) return <h2> Loading...</h2>
         <SkipNavContent />
         <QueryForm onAddQuery = {handleNewQuery}/>
         <Intro/>
+        <Footer/>
       </Route>
     </Switch>
    </Router>
    
-   <Footer/>
+ 
      
   </>
-  );
+  )
 }
 
-export default App;
+export default App

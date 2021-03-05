@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-
 function SignUp() {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
@@ -13,8 +12,17 @@ function SignUp() {
 
   return (
       <>
+    
     <form onSubmit={handleSubmit}>
       <h1>Signup</h1>
+      <label className="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        autoComplete="off"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
 
       <label className="username">Username</label>
       <input
@@ -35,10 +43,8 @@ function SignUp() {
       />
     
 
-      <label className="name">Bio</label>
-      <textarea id="name" value={name} onChange={(e) => setName(e.target.value)} />
 
-      <label htmlFor="password">Password</label>
+      <label className="password">Password</label>
       <input
         type="password"
         id="password"

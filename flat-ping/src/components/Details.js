@@ -26,6 +26,7 @@ function Details({alterList, queryList}) {
     }
 
     return (
+        <>
         <div>
             <div className="details-title">
                 <h5 >Name: { name }</h5>
@@ -67,6 +68,8 @@ function Details({alterList, queryList}) {
                 )
             } 
         </div>
+      
+        </>
     )
 }
 

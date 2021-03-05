@@ -56,6 +56,25 @@ function handleLogout() {
                             Dashboard
                         </Link>
                     </li>
+                    <li className="nav-item">
+                        <Link to='/SignUp'className="nav-links" onClick={closeMobileMenu}>
+                            SignUp
+                        </Link>
+                        
+                    </li>
+                    <li className="nav-item">
+                        <Link to='/profile'className="nav-links" onClick={closeMobileMenu}>
+                            Profile
+                        </Link>
+                        
+                    </li>
+                    <li className="nav-item">
+                        <Link to='/Login'className="nav-links" onClick={closeMobileMenu}>
+                            Login
+                        </Link>
+                        
+                    </li>
+                    
                     <li className="nav-button">
                         {button ? (
                             <Link to='/sign-up' className="button-link">
