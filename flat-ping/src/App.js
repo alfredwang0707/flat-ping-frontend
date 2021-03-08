@@ -12,6 +12,7 @@ import Intro from './components/Intro'
 import SignUp from "./components/SignUp"
 import Login from "./components/Login";
 import Profile from './components/Profile'
+//to do , show current user page etc
 
 
 function App() {
@@ -38,7 +39,7 @@ function App() {
   
         const token = localStorage.getItem("token")
         if (token) {
-          fetch("http://localhost:3000/details", {
+          fetch("http://localhost:3000/profile", {
             method: "GET",
             headers: {
               Authorization: `Bearer ${token}`,
@@ -109,11 +110,13 @@ if (!isloaded) return <h2> Loading...</h2>
             {currentUser ? (
               <Profile currentUser={currentUser} />
             ) : (
-              <Redirect to="/" />
+              <Redirect to="/signup" />
             )}
           </Route>
+      
 
       <Route path='/Details'>
+      
         <Details 
           alterList ={alterList}
           queryList ={queryList}

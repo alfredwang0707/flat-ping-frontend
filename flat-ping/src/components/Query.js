@@ -1,11 +1,12 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import {useHistory} from  'react-router-dom'
 
 
-function Query({query, onUpdateQuery, onDeleteQuery, alterList, }) {
+function Query({query, onUpdateQuery, onDeleteQuery, alterList, currentUser}) {
     // console.log("query", alterList)
     const {name, url, id, status} = query
+
     const history = useHistory()
     
     function handleUpdateClick(){

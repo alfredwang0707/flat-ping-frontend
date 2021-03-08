@@ -1,11 +1,12 @@
 import React, { useState } from "react"
+import { Redirect } from "react-router-dom"
 
 function Login({ setCurrentUser }) {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
 
   function handleSubmit(e) {
-    e.preventDefault();
+    e.preventDefault()
     const formData = { username, password }
 
     fetch("http://localhost:3000/login", {
@@ -17,9 +18,10 @@ function Login({ setCurrentUser }) {
     })
       .then((r) => r.json())
       .then((data) => {
-        setCurrentUser(data.user);
-        localStorage.setItem("token", data.token);
-      });
+        setCurrentUser(data.user)
+        localStorage.setItem("token", data.token)
+      })
+      return <Redirect to="/" />
 
   }
 

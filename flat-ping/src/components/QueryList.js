@@ -4,7 +4,7 @@ import './QueryList.css'
 
 
 const QueryList = ({queryList, onUpdateQuery, onDeleteQuery, alterList})=> {
-    console.log("alterlist", alterList)
+    // console.log("alterlist", alterList)
     // console.log("querylist", queryList)
 
 

@@ -7,8 +7,14 @@ function Profile({ currentUser }) {
 
   function handleSubmit(e) {
     e.preventDefault()
+
     // TODO: make a fetch request to edit the current user
     // then update that user in state in our App component
+    // const updateProfile = {
+    //    email: 
+    //    name:
+
+    // }
   }
 
 

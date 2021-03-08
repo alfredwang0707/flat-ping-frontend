@@ -24,7 +24,7 @@ function SignUp() {
         onChange={(e) => setName(e.target.value)}
       />
 
-      <label className="username">Username</label>
+      <label className="username">Username, this is your login account name</label>
       <input
         type="text"
         id="username"

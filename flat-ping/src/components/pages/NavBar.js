@@ -27,10 +27,12 @@ function NavBar({currentUser, setCurrentUser}) {
     },[])
 
 window.addEventListener("resize", showButton)
-function handleLogout() {
+
+    function handleLogout() {
+        //setuser,remove user from state 
     setCurrentUser(null);
     localStorage.removeItem("token");
-  }
+    }
 
 
     return (
