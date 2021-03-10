@@ -30,8 +30,8 @@ window.addEventListener("resize", showButton)
 
     function handleLogout() {
         //setuser,remove user from state 
-    setCurrentUser(null);
-    localStorage.removeItem("token");
+        setCurrentUser(null);
+        localStorage.removeItem("token");
     }
 
 
@@ -70,30 +70,37 @@ window.addEventListener("resize", showButton)
                         </Link>
                         
                     </li>
-                    <li className="nav-item">
-                        <Link to='/Login'className="nav-links" onClick={closeMobileMenu}>
-                            Login
-                        </Link>
-                        
-                    </li>
-                    
-                    <li className="nav-button">
-                        {button ? (
-                            <Link to='/sign-up' className="button-link">
-                                <Button buttonStyle="button-outline">Log Out</Button>
-                            </Link>
-                        ): (
-                            <Link to='/sign-up' className="button-link">
-                                <Button 
-                                buttonStyle="button-outline"
-                                buttonSize="button-mobile"
+                    {
+                        !currentUser ? (
+                            <li className="nav-item">
+                                <Link to='/Login'className="nav-links" onClick={closeMobileMenu}>
+                                    Login
+                                </Link>
                                 
-                                onClick={handleLogout}>
-                                Log Out
-                                </Button>
-                            </Link>
-                        )}
-                    </li>
+                            </li>
+                        ) : (
+                            <li className="nav-button">
+                                {button ? (
+                                    <Link to='/sign-up' className="button-link">
+                                        <Button buttonStyle="button-outline" onClick={handleLogout}>Log Out</Button>
+                                    </Link>
+                                ): (
+                                    <Link to='/sign-up' className="button-link">
+                                        <Button 
+                                        buttonStyle="button-outline"
+                                        buttonSize="button-mobile"
+                                        
+                                        onClick={handleLogout}>
+                                        Log Out
+                                        </Button>
+                                    </Link>
+                                )}
+                            </li>
+                        )
+                    }
+
+                    
+
               
                 </ul>
         </div>

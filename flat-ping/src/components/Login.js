@@ -20,6 +20,7 @@ function Login({ setCurrentUser }) {
       .then((data) => {
         setCurrentUser(data.user)
         localStorage.setItem("token", data.token)
+        console.log('saved token', { token: data.token })
       })
       return <Redirect to="/" />
 

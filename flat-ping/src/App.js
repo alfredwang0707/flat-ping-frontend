@@ -37,20 +37,21 @@ function App() {
 
   useEffect(() => {
   
-        const token = localStorage.getItem("token")
-        if (token) {
-          fetch("http://localhost:3000/profile", {
-            method: "GET",
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          })
-            .then((r) => r.json())
-            .then((user) => {
-            setCurrentUser(user)
-            })
-        }
-      }, [])
+    const token = localStorage.getItem("token")
+    console.log('token', { token })
+    if (token) {
+      fetch("http://localhost:3000/profile", {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+        .then((r) => r.json())
+        .then((user) => {
+        setCurrentUser(user)
+        })
+    }
+  }, [])
     
       console.log({ currentUser })
 
@@ -88,7 +89,7 @@ if (!isloaded) return <h2> Loading...</h2>
    
    
     <SkipNavLink />
-    <NavBar currentUser={currentUser}/>
+    <NavBar currentUser={currentUser} setCurrentUser={setCurrentUser} />
     <Switch>
       <Route path ='/QueryList' >
         <QueryList  
