@@ -32,7 +32,7 @@ function QueryForm({onAddQuery}) {
             status: "active"
         }
         console.log({formData})
-        fetch(`http://localhost:3000/queries`, {
+        fetch(`https://flat-ping.herokuapp.com/queries`, {
           method: "POST",
           headers: {
               'Content-Type': 'application/json',

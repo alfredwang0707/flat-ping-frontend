@@ -15,7 +15,7 @@ function Query({query, onUpdateQuery, onDeleteQuery, alterList, currentUser}) {
             status: newStatus
         }
 
-        fetch(`http://localhost:3000/queries/${id}`,{
+        fetch(`https://flat-ping.herokuapp.com/queries/${id}`,{
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
@@ -28,7 +28,7 @@ function Query({query, onUpdateQuery, onDeleteQuery, alterList, currentUser}) {
 
     const handleDeleteClick = () => {
         if (window.confirm('Are you sure you wish to delete this item?')) {
-            fetch(`http://localhost:3000/queries/${id}`,{
+            fetch(`https://flat-ping.herokuapp.com/queries/${id}`,{
                 method: "DELETE",
             })
             // Promise.resolve()

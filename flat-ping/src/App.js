@@ -21,7 +21,7 @@ function App() {
   const [isloaded, setIsLoaded] = useState("")
   const [alterList, setAlterList] = useState([])
 
-  const url = "http://localhost:3000/queries/"
+  const url = "https://flat-ping.herokuapp.com/queries/"
   const [currentUser, setCurrentUser] = useState(null)
 
 
@@ -40,7 +40,7 @@ function App() {
     const token = localStorage.getItem("token")
     console.log('token', { token })
     if (token) {
-      fetch("http://localhost:3000/profile", {
+      fetch("https://flat-ping.herokuapp.com/profile", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -71,7 +71,7 @@ function App() {
 
   /*   fetching initial alter table */ 
   useEffect(()=> {
-      fetch("http://localhost:3000/alters/")
+      fetch("https://flat-ping.herokuapp.com/alters/")
         .then((r)=>r.json())
         .then(alterArray =>{
           console.log("app.js",alterArray)
