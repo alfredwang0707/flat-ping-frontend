@@ -79,7 +79,7 @@ function App() {
           setIsLoaded(true)
       })},[])
 
-
+      
 if (!isloaded) return <h2> Loading...</h2>
 // console.log("app.js", queryList)
   return ( 
