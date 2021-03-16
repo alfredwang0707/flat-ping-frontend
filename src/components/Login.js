@@ -1,10 +1,10 @@
 import React, { useState } from "react"
-import { Redirect } from "react-router-dom"
+import { useHistory } from "react-router-dom"
 
 function Login({ setCurrentUser }) {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
-
+  const history = useHistory()
   function handleSubmit(e) {
     e.preventDefault()
     const formData = { username, password }
@@ -22,7 +22,7 @@ function Login({ setCurrentUser }) {
         localStorage.setItem("token", data.token)
         console.log('saved token', { token: data.token })
       })
-      return <Redirect to="/" />
+      history.push("/")
 
   }
 

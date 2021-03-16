@@ -15,6 +15,20 @@ function Profile({ currentUser }) {
     //    name:
 
     // }
+
+  //   const userData ={
+  //     email,
+  //     name
+  //   }
+  //   fetch('`https://flat-ping.herokuapp.com/users', {
+  //     method: "PATCH",
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //     body:JSON.stringify(userData)
+  //   })
+  //   setName("")
+  //   setEmail("")
   }
 
 
