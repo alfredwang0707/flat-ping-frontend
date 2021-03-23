@@ -23,7 +23,7 @@ function Profile({ currentUser }) {
   //   fetch('`https://flat-ping.herokuapp.com/users', {
   //     method: "PATCH",
   //     headers: {
-  //       'Content-Type': 'application/json',
+  //       'Content-Type': 'application/json', 
   //     },
   //     body:JSON.stringify(userData)
   //   })
