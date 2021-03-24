@@ -53,54 +53,51 @@ window.addEventListener("resize", showButton)
                             Home
                         </Link>
                     </li>
-                    <li className="nav-item">
-                        <Link to='/QueryList'className="nav-links" onClick={closeMobileMenu}>
-                            Dashboard
-                        </Link>
-                    </li>
-                    {
-                        !currentUser? (
+                {!currentUser? (
                     <li className="nav-item">
                         <Link to='/SignUp'className="nav-links" onClick={closeMobileMenu}>
                             SignUp
                         </Link>
-                        
                     </li>
                     ) : (
+                        <>
                         <li className="nav-item">
                             <Link to='/profile'className="nav-links" onClick={closeMobileMenu}>
                                 Profile
                             </Link>
-                        
-                        </li>)
-                    }
+                        </li>
+                        <li className="nav-item">
+                        <Link to='/QueryList'className="nav-links" onClick={closeMobileMenu}>
+                            Dashboard
+                        </Link>
+                        </li>
+                        </>)
+                }
                    
-                    {
-                        !currentUser ? (
-                            <li className="nav-item">
-                                <Link to='/Login'className="nav-links" onClick={closeMobileMenu}>
-                                    Login
-                                </Link>
+                 {!currentUser ? (
+                    <li className="nav-item">
+                        <Link to='/Login'className="nav-links" onClick={closeMobileMenu}>
+                            Login
+                        </Link>    
+                    </li>
+                    ) : (
+                    <li className="nav-button">
+                        {button ? (
+                            <Link to='/sign-up' className="button-link">
+                                <Button buttonStyle="button-outline" onClick={handleLogout}>Log Out</Button>
+                            </Link>
+                        ): (
+                            <Link to='/sign-up' className="button-link">
+                                <Button 
+                                buttonStyle="button-outline"
+                                buttonSize="button-mobile"
                                 
-                            </li>
-                        ) : (
-                            <li className="nav-button">
-                                {button ? (
-                                    <Link to='/sign-up' className="button-link">
-                                        <Button buttonStyle="button-outline" onClick={handleLogout}>Log Out</Button>
-                                    </Link>
-                                ): (
-                                    <Link to='/sign-up' className="button-link">
-                                        <Button 
-                                        buttonStyle="button-outline"
-                                        buttonSize="button-mobile"
-                                        
-                                        onClick={handleLogout}>
-                                        Log Out
-                                        </Button>
-                                    </Link>
-                                )}
-                            </li>
+                                onClick={handleLogout}>
+                                Log Out
+                                </Button>
+                            </Link>
+                        )}
+                    </li>
                         )
                     }
 

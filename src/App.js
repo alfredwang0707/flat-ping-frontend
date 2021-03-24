@@ -102,7 +102,10 @@ if (!isloaded) return <h2> Loading...</h2>
         />
       </Route>
       <Route path="/signup">
-        <SignUp />
+        <SignUp 
+          currentUser={currentUser} 
+          setCurrentUser={setCurrentUser}
+        />
       </Route>
       <Route path="/login">
         <Login currentUser={currentUser} setCurrentUser={setCurrentUser}/>
