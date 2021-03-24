@@ -58,18 +58,23 @@ window.addEventListener("resize", showButton)
                             Dashboard
                         </Link>
                     </li>
+                    {
+                        !currentUser? (
                     <li className="nav-item">
                         <Link to='/SignUp'className="nav-links" onClick={closeMobileMenu}>
                             SignUp
                         </Link>
                         
                     </li>
-                    <li className="nav-item">
-                        <Link to='/profile'className="nav-links" onClick={closeMobileMenu}>
-                            Profile
-                        </Link>
+                    ) : (
+                        <li className="nav-item">
+                            <Link to='/profile'className="nav-links" onClick={closeMobileMenu}>
+                                Profile
+                            </Link>
                         
-                    </li>
+                        </li>)
+                    }
+                   
                     {
                         !currentUser ? (
                             <li className="nav-item">

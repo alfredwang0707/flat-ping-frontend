@@ -22,7 +22,7 @@ function Login({ setCurrentUser }) {
         localStorage.setItem("token", data.token)
         console.log('saved token', { token: data.token })
       })
-      history.push("/Details")
+      history.push("/Alters")
 
   }
 

@@ -14,7 +14,7 @@ function SignUp() {
       <>
     
     <form onSubmit={handleSubmit}>
-      <h1>Signup</h1>
+      <h1>Sign Up</h1>
       <label className="name">Name</label>
       <input
         type="text"
