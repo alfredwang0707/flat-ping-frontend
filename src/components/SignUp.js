@@ -22,11 +22,17 @@ function SignUp({setCurrentUser}) {
       .then((r) => r.json())
       .then((data) => {
         setCurrentUser(data.newUser)
+        console.log( 'signup',data.newUser)
         localStorage.setItem("token", data.token)
         console.log('saved token', {token: data.token})
       })
-      history.push("/")
+      history.push("/profile")
   
+  }
+  const myStyle ={
+    textAlign:'center',
+    paddingTop:'32px',
+    color: 'gray'
   }
   //todo when sign up, current user not found
   /*********************  JSX  ******************************/
@@ -81,6 +87,8 @@ function SignUp({setCurrentUser}) {
 
       <input type="submit" value="Signup" />
     </form>
+
+    <h3 style={myStyle}> you would need to log in again after register</h3>
   </>
   )
 }
