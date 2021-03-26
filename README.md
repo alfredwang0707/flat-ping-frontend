@@ -43,7 +43,8 @@ researched many libraries before settling on these
 * Image sizes need to be standardized if we support viewable region specific monitoring
 * Currently the Node.js process runs all queries through an Array.map, which runs many browser sessions simultaneously. It needs to be limited on some TBD basis
 * Currently the API dev key is committed and in the frontend code
-* Currently most of the data is fetched and stored on the main App.js file. User auth is not currently implemented, so this is OK now. Once that is done, page specific data will be loaded on demand
+* Currently most of the data is fetched and stored on the main App.js file.
+*  User auth is not currently implemented, so this is OK now. Once that is done, page specific data will be loaded on demand (Fixed)
 * future [feature/tech roadmap](https://trello.com/b/P9oCC8aK/simple-project-board)
 
 ## Application usage steps
