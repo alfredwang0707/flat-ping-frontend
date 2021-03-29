@@ -8,8 +8,8 @@ const request = mailjet.post('send', { version: 'v3.1' }).request({
   Messages: [
     {
       From: {
-        Email: 'pilot@mailjet.com',
-        Name: 'Mailjet Pilot',
+        Email: ,
+        Name: name,
       },
       To: [
         {
@@ -17,11 +17,12 @@ const request = mailjet.post('send', { version: 'v3.1' }).request({
           Name: 'passenger 1',
         },
       ],
-      TemplateID: 1,
+      TemplateID: 2715595,
       TemplateLanguage: true,
-      Subject: 'Your email flight plan!',
+      Subject: 'Welcome to Flat-ping'
     },
   ],
+  "SandboxMode":true
 })
 request
   .then(result => {
