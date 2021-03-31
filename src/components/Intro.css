@@ -75,6 +75,8 @@
      text-align: center;
      padding: 30px;
 }
+
+
 .cases-container{
     max-width: 1000px;
     flex-wrap: wrap;
@@ -85,19 +87,19 @@
     padding: 30px 100px 100px 100px;
 }
 
-.cases-container-item{
+.front-cases-container-item{
     display: flex;
     flex-direction: column;
     align-items: center;
     color: black;  
 }
-.cases-container-item img {
+.front-cases-container-item img {
     width: 100px;
     height: 100px;
     object-fit: contain;  
 }
 
-.cases-container-item h2 {
+.front-cases-container-item h2 {
     text-align: center;
     object-fit: contain;
     font-size: 16px;

@@ -34,7 +34,7 @@ function SignUp({setCurrentUser}) {
     paddingTop:'32px',
     color: 'gray'
   }
-  //todo when sign up, current user not found
+
   /*********************  JSX  ******************************/
 
 
@@ -42,7 +42,7 @@ function SignUp({setCurrentUser}) {
       <>
     
     <form onSubmit={handleSubmit}>
-      <h1>Sign Up</h1>
+      <h1 className="signup-h1">Sign Up</h1>
       <label className="name">Name</label>
       <input
         required

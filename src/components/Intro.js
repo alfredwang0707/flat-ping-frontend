@@ -28,32 +28,36 @@ function Intro() {
 
         <p className="use-case">Thousands of use cases</p>
         <div className="cases-container">
-            <div className="circle">
-            <div className="cases-container-item">
-                <img src ="https://static.thenounproject.com/png/3484777-200.png" alt="vaccine"></img>
-               <h2> Monitor Vaccine Availability</h2>
+            
+            <div className="inner">
+                <div className="circle">
+                    <div className="front-cases-container-item">
+                        <img src ="https://static.thenounproject.com/png/3484777-200.png" alt="vaccine"></img>
+                        <h2> Monitor Vaccine Availability</h2>
+                    </div>
+                </div>
+          
             </div>
-            </div>
             <div className="circle">
-            <div className="cases-container-item">
+            <div className="front-cases-container-item">
                 <img src ="https://image.flaticon.com/icons/png/512/942/942818.png" alt="job"></img>
                <h2> Job Hunting, Career Page Monitoring</h2>
             </div>
             </div>
             <div className="circle">
-            <div className="cases-container-item">
+            <div className="front-cases-container-item">
                  <img src ="https://static.thenounproject.com/png/3324388-200.png" alt="job"></img>
                 <h2> Quality Assurance, Affiliates, SEO </h2>
             </div>
             </div>
             <div className="circle">
-            <div className="cases-container-item">
+            <div className="front-cases-container-item">
                 <img src ="https://static.thenounproject.com/png/2764070-200.png" alt="price"></img>
                <h2> Price Monitoring</h2>
             </div>
             </div>
             <div className="circle">
-            <div className="cases-container-item">
+            <div className="front-cases-container-item">
                 <img src ="https://static.thenounproject.com/png/3115583-200.png" alt="legal"></img>
                <h2> Regulation & Compliance</h2>
             </div>
