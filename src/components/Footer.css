@@ -61,6 +61,9 @@
   padding-left: 6px;
   padding-right: 6px;
 }
+.social-icons i {
+  padding: 4px;
+}
 
 .social-icon-link {
   color: black;

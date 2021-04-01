@@ -52,7 +52,10 @@ function Footer() {
           </small>
           <div class='social-icons'>
             <div>
-              <i class='fab fa-facebook-f' />
+              <a href="https://github.com/alfredwang0707"><i class="fab fa-github"></i></a>
+            </div>
+            <div >
+              <a href="https://www.linkedin.com/in/alfredwang0707/"><i class='fab fa-linkedin' /></a>  
             </div>
             <div>
               <i class='fab fa-instagram' />
@@ -62,9 +65,6 @@ function Footer() {
             </div>
             <div>
               <i class='fab fa-twitter' />
-            </div>
-            <div >
-              <i class='fab fa-linkedin' />
             </div>
           </div>
         </div>

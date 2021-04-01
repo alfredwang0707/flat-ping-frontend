@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import {useHistory} from "react-router-dom"
+import './SignUp.css'
 
 function SignUp({setCurrentUser}) {
 
@@ -29,11 +30,7 @@ function SignUp({setCurrentUser}) {
       history.push("/profile")
   
   }
-  const myStyle ={
-    textAlign:'center',
-    paddingTop:'32px',
-    color: 'gray'
-  }
+
 
   /*********************  JSX  ******************************/
 
@@ -41,8 +38,10 @@ function SignUp({setCurrentUser}) {
   return (
       <>
     
-    <form onSubmit={handleSubmit}>
-      <h1 className="signup-h1">Sign Up</h1>
+    <form className="signup-form" onSubmit={handleSubmit}>
+      <h2 className="signup-h2">Sign Up</h2>
+      <h3 className="signup-h3"> you would need to log in again after register</h3>
+
       <label className="name">Name</label>
       <input
         required
@@ -87,8 +86,8 @@ function SignUp({setCurrentUser}) {
 
       <input type="submit" value="Signup" />
     </form>
+  
 
-    <h3 style={myStyle}> you would need to log in again after register</h3>
   </>
   )
 }
