@@ -9,20 +9,23 @@ function Login({ setCurrentUser }) {
     e.preventDefault()
     const formData = { username, password }
 
-    fetch("https://flat-ping.herokuapp.com/login", {
+    fetch("https://flat-ping-front.herokuapp.com/Login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
     })
-      .then((r) => r.json())
-      .then((data) => {
-        setCurrentUser(data.user)
-        localStorage.setItem("token", data.token)
-        console.log('saved token', { token: data.token })
-      })
-      history.push("/Alters")
+    .then((r) => r.json())
+    .then((data) => {
+      setCurrentUser(data.user)
+      localStorage.setItem("token", data.token)
+      console.log('saved token', { token: data.token })
+    })
+    .catch(err => {
+      console.log('failed to login', err)
+    })
+    history.push("/Alters")
 
   }
 

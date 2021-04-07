@@ -4,10 +4,9 @@ const PNG = require('pngjs').PNG;
 const pixelmatch = require('pixelmatch');
 const { Sequelize, DataTypes } = require('sequelize');
 const fetch = require('node-fetch');
-const sequelize = new Sequelize({
-  dialect: 'sqlite',
-  storage: '../../../flat-ping-rails-backend/flat-ping/db/development.sqlite3'
-})
+const sequelize = new Sequelize('postgres://bftrhuaehkacga:c4b34b805c93f63996fa307bbf1771fedca13e09477dc3b4e63f9f92b1ca23d4@ec2-52-71-231-37.compute-1.amazonaws.com:5432/dclp74ul715nk')
+
+
 // if there is no old image, save the image file name to the query
 // Simple UPDATE queries 
 // query.imageName = "1-20210206181930"
