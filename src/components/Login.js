@@ -9,7 +9,7 @@ function Login({ setCurrentUser }) {
     e.preventDefault()
     const formData = { username, password }
 
-    fetch("https://flat-ping-front.herokuapp.com/Login", {
+    fetch("https://flat-ping-front.herokuapp.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
