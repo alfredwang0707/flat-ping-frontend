@@ -25,8 +25,8 @@ function QueryForm({onAddQuery},{ currentUser }) {
          
         
         const formData = {
-            name: currentUser.name,
-            email: currentUser.email,
+            name,
+            email,
             url,
             user_id: currentUser.user_id,
             status: "active"

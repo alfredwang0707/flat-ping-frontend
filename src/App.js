@@ -129,7 +129,11 @@ function App() {
     
       <Route path ='/' >
         <SkipNavContent />
-        <QueryForm onAddQuery = {handleNewQuery}/>
+        <QueryForm 
+        onAddQuery = {handleNewQuery}
+        currentUser={currentUser} 
+        setCurrentUser={setCurrentUser}
+        />
         <Intro/>
         <Footer/>
       </Route>
