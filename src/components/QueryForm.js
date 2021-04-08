@@ -1,13 +1,23 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import './QueryForm.css'
 import emailjs from 'emailjs-com'
 
 
-function QueryForm({onAddQuery},{ currentUser }) {
+function QueryForm({onAddQuery, currentUser}) {
     const [url, setUrl] =useState("")
     const [name, setName] = useState("") 
     const [email, setEmail] = useState("")
 
+    useEffect(() => {
+      if(currentUser) {
+          setName(currentUser.name)
+          setEmail(currentUser.email)
+      }
+    }, [currentUser])
+
+    console.log(currentUser)
+    const {id} = currentUser || {}
+    
     const handleSubmit = event => {
         event.preventDefault()
         const emailFormValues = {
@@ -28,7 +38,7 @@ function QueryForm({onAddQuery},{ currentUser }) {
             name,
             email,
             url,
-            user_id: currentUser.id,
+            user_id: id,
             status: "active"
         }
         console.log({formData})
