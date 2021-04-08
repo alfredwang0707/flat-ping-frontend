@@ -3,7 +3,7 @@ import './QueryForm.css'
 import emailjs from 'emailjs-com'
 
 
-function QueryForm({onAddQuery}) {
+function QueryForm({onAddQuery},{ currentUser }) {
     const [url, setUrl] =useState("")
     const [name, setName] = useState("") 
     const [email, setEmail] = useState("")
@@ -25,10 +25,10 @@ function QueryForm({onAddQuery}) {
          
         
         const formData = {
-            name,
-            email,
+            name: currentUser.name,
+            email: currentUser.email,
             url,
-            user_id: "",
+            user_id: currentUser.user_id,
             status: "active"
         }
         console.log({formData})
