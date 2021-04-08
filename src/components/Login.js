@@ -8,13 +8,14 @@ function Login({ setCurrentUser }) {
   function handleSubmit(e) {
     e.preventDefault()
     const formData = { username, password }
-
-    fetch("https://flat-ping-front.herokuapp.com/login", {
+   
+    fetch("https://flat-ping.herokuapp.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(formData),
+      body: JSON.stringify(formData)
+      
     })
     .then((r) => r.json())
     .then((data) => {
