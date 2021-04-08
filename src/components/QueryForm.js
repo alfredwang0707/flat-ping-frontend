@@ -28,7 +28,7 @@ function QueryForm({onAddQuery},{ currentUser }) {
             name,
             email,
             url,
-            user_id: currentUser.user_id,
+            user_id: currentUser.id,
             status: "active"
         }
         console.log({formData})
