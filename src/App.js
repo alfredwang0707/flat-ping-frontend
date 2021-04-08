@@ -12,7 +12,6 @@ import Intro from './components/Intro'
 import SignUp from "./components/SignUp"
 import Login from "./components/Login";
 import Profile from './components/Profile'
-//to do , show current user page etc
 
 
 function App() {
@@ -53,7 +52,7 @@ function App() {
     }
   }, [])
     
-      console.log({ currentUser })
+      // console.log({ currentUser })
 
   function handleUpdateQuery(updatedQuery) {
     const updatedQueries = queryList.map((query)=> query.id===updatedQuery.id ? updatedQuery: query)
