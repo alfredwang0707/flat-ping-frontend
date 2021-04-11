@@ -10,11 +10,6 @@ function Profile({ currentUser }) {
 
     // TODO: make a fetch request to edit the current user
     // then update that user in state in our App component
-    // const updateProfile = {
-    //    email: 
-    //    name:
-
-    // }
 
   //   const userData ={
   //     email,
@@ -23,12 +18,15 @@ function Profile({ currentUser }) {
   //   fetch('`https://flat-ping.herokuapp.com/users', {
   //     method: "PATCH",
   //     headers: {
+  //        Authorization: `Bearer ${token}`
   //       'Content-Type': 'application/json', 
   //     },
   //     body:JSON.stringify(userData)
   //   })
-  //   setName("")
-  //   setEmail("")
+  //      .then(r=> r.json())
+  //      .then((result))
+  //   setEmail(userData.email)
+  //   setName(userData.email)
   }
 
 
