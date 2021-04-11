@@ -30,26 +30,35 @@ researched many libraries before settling on these
 * [Puppeteer] Generate Screenshots and PDFs of pages
 * [pixel-match] Image comparison Library
 * [pngjs] PNG encoder/decoder for Node.js
-* [Sequelize]  ORM for reading database
 * [EmailJS] Send Emails with pre-set templates
 * [Reach UI] Acessibility components
+* [JWT] Full Auth with jwt token
+* [Cloudinary] Client-side SDK
+
+* Apr 11 update
+* No longer using [Sequelize]  ORM for reading database since photos are uploaded to cloudinary
 
 
 
 ## Known technical debt
-* The file structure is slightly awkward as everything is run locally, and the Rails, Node.js, and frontend public folder all need access to the images.
 * The chosen email API only supports 200 monthly emails
 * Images hosted locally + email API not supporting attachments = email alerts don't have images
 * Image sizes need to be standardized if we support viewable region specific monitoring
 * Currently the Node.js process runs all queries through an Array.map, which runs many browser sessions simultaneously. It needs to be limited on some TBD basis
 * Currently the API dev key is committed and in the frontend code
 * Currently most of the data is fetched and stored on the main App.js file.
-*  User auth is not currently implemented, so this is OK now. Once that is done, page specific data will be loaded on demand (Fixed)
 * future [feature/tech roadmap](https://trello.com/b/P9oCC8aK/simple-project-board)
+
+## Patched debt
+*  User auth is not currently implemented, so this is OK now. Once that is done, page specific data will be loaded on demand 
+*  UPDATE:User Auth is now implemented with JWT
+
+* The file structure is slightly awkward as everything is run locally, and the Rails, Node.js, and frontend public folder all need access to the images.
+* UPDATE:Repo is now split to 3 parts, front end, node, backend, images are now uploaded so all threee have access
 
 ## Application usage steps
 1. Go to the form on the home page and enter a url, nickname, and contact email- then submit
-2. For purposes of this demo, the check frequency is 1 min
+2. Current frequency is set yo once a day to save dyno-hours
 3. An email alert will be send to you to check the change manually
 4. Go to the dashboard to manage queries and view alert differences
 
@@ -69,3 +78,7 @@ researched many libraries before settling on these
 [EmailJS]: <https://www.emailjs.com/>
 
 [Sequelize]: <https://sequelize.org/>
+
+[JWT]: <https://jwt.io/>
+
+[Cloudinary]: <https://cloudinary.com/documentation>
