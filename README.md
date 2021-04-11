@@ -51,10 +51,10 @@ researched many libraries before settling on these
 
 ## Patched debt
 *  User auth is not currently implemented, so this is OK now. Once that is done, page specific data will be loaded on demand 
-*  User Auth is now implemented with JWT
+*  UPDATE:User Auth is now implemented with JWT
 
 * The file structure is slightly awkward as everything is run locally, and the Rails, Node.js, and frontend public folder all need access to the images.
-* Repo is now split to 3 parts, front end, node, backend, images are now uploaded so all threee have access
+* UPDATE:Repo is now split to 3 parts, front end, node, backend, images are now uploaded so all threee have access
 
 ## Application usage steps
 1. Go to the form on the home page and enter a url, nickname, and contact email- then submit
@@ -81,4 +81,4 @@ researched many libraries before settling on these
 
 [JWT]: <https://jwt.io/>
 
-[Cloudinary] <https://cloudinary.com/documentation>
+[Cloudinary]: <https://cloudinary.com/documentation>
