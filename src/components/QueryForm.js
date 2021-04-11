@@ -95,7 +95,7 @@ function QueryForm({onAddQuery, currentUser}) {
             
             />
             <button className="button-medium">
-            Start Monitoring! Current Frequency is Every [1] minute
+            Start Monitoring! Current Frequency is Every 24hrs
             </button>
         </form>
         </div>
