@@ -75,11 +75,18 @@ function App() {
         .then(alterArray =>{
           console.log("app.js",alterArray)
           setAlterList(alterArray)
-          // setIsLoaded(true)
+          setIsLoaded(true)
       })},[])
 
       
-// if (!isloaded) return <h2> Loading...</h2>
+if (!isloaded) 
+  return (
+  <>
+    <h2> Loading...</h2>
+        <div class="loader">
+        <div class="bar"></div>
+    </div>
+  </>)
 // console.log("app.js", queryList)
   return ( 
     <>
