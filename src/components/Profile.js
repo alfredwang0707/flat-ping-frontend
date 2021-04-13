@@ -3,30 +3,31 @@ import React, { useState } from "react"
 function Profile({ currentUser }) {
   const [email, setEmail] = useState(currentUser.email)
   const [name, setName] = useState(currentUser.name)
-  const { username } = currentUser
+  const { username, id } = currentUser
 
   function handleSubmit(e) {
     e.preventDefault()
-
+    console.log(currentUser)
     // TODO: make a fetch request to edit the current user
     // then update that user in state in our App component
-
-  //   const userData ={
-  //     email,
-  //     name
-  //   }
-  //   fetch('`https://flat-ping.herokuapp.com/users', {
-  //     method: "PATCH",
-  //     headers: {
-  //        Authorization: `Bearer ${token}`
-  //       'Content-Type': 'application/json', 
-  //     },
-  //     body:JSON.stringify(userData)
-  //   })
-  //      .then(r=> r.json())
-  //      .then((result))
-  //   setEmail(userData.email)
-  //   setName(userData.email)
+//    const token = localStorage.getItem("token")
+    const token = localStorage.getItem("token")
+    const userData ={
+      email,
+      name
+    }
+    fetch(`https://flat-ping.herokuapp.com/users/${id}`, {
+      method: "PATCH",
+      headers: {
+         Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json', 
+      },
+      body:JSON.stringify(userData)
+    })
+       .then(r=> r.json())
+       
+    setEmail(userData.email)
+    setName(userData.name)
   }
 
 
