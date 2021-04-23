@@ -40,25 +40,25 @@ function Intro() {
             </div>
             <div className="circle">
             <div className="front-cases-container-item">
-                <img src ="https://image.flaticon.com/icons/png/512/942/942818.png" alt="job"></img>
+                <img src ="https://image.flaticon.com/icons/png/512/942/942818.png" alt="job hunting icon"></img>
                <h2> Job Hunting, Career Page Monitoring</h2>
             </div>
             </div>
             <div className="circle">
             <div className="front-cases-container-item">
-                 <img src ="https://static.thenounproject.com/png/3324388-200.png" alt="job"></img>
+                 <img src ="https://static.thenounproject.com/png/3324388-200.png" alt="quality assurance icon"></img>
                 <h2> Quality Assurance, Affiliates, SEO </h2>
             </div>
             </div>
             <div className="circle">
             <div className="front-cases-container-item">
-                <img src ="https://static.thenounproject.com/png/2764070-200.png" alt="price"></img>
+                <img src ="https://static.thenounproject.com/png/2764070-200.png" alt="price icon"></img>
                <h2> Price Monitoring</h2>
             </div>
             </div>
             <div className="circle">
             <div className="front-cases-container-item">
-                <img src ="https://static.thenounproject.com/png/3115583-200.png" alt="legal"></img>
+                <img src ="https://static.thenounproject.com/png/3115583-200.png" alt="legal icon"></img>
                <h2> Regulation & Compliance</h2>
             </div>
             </div>

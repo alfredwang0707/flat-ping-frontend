@@ -44,6 +44,7 @@ function SignUp({setCurrentUser}) {
 
       <label className="name">Name</label>
       <input
+        aria-label="name"
         required
         type="text"
         id="name"
@@ -54,6 +55,7 @@ function SignUp({setCurrentUser}) {
 
       <label className="username">Username, this is your login account name</label>
       <input
+        aria-label="username"
         required
         type="text"
         id="username"
@@ -64,6 +66,7 @@ function SignUp({setCurrentUser}) {
 
       <label className="email">Email</label>
       <input
+        aria-label="email"
         required
         type="text"
         id="email"
@@ -76,6 +79,7 @@ function SignUp({setCurrentUser}) {
 
       <label className="password">Password</label>
       <input
+        aria-label="password"
         required
         type="password"
         id="password"
