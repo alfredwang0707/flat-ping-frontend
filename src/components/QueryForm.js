@@ -68,6 +68,7 @@ function QueryForm({onAddQuery, currentUser}) {
             <form className="query-form" onSubmit={handleSubmit}>
             <input
                 type="text"
+                aria-label="your name here"
                 placeholder="Your name here"
                 value={name}
                 className="query-input"
@@ -76,6 +77,7 @@ function QueryForm({onAddQuery, currentUser}) {
             />
             <input 
                 type="text" 
+                aria-label="a link to monitor"
                 placeholder="Add a link to monitor"
                 value ={url}
                 name="text" 
@@ -86,6 +88,7 @@ function QueryForm({onAddQuery, currentUser}) {
             />
             <input 
                 type="text" 
+                aria-label="enter email for notifications"
                 placeholder="email for notifications"
                 value ={email}
                 name="text" 

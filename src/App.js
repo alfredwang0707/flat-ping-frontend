@@ -135,7 +135,7 @@ if (!isloaded)
       
     
       <Route path ='/' >
-        <SkipNavContent />
+        <SkipNavContent label="skip to content" />
         <QueryForm 
         onAddQuery = {handleNewQuery}
         currentUser={currentUser} 
