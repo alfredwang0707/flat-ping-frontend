@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import "./Profile.css"
 
 function Profile({ currentUser }) {
   const [email, setEmail] = useState(currentUser.email)
@@ -32,8 +33,8 @@ function Profile({ currentUser }) {
 
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h1>{username}'s Profile</h1>
+    <form onSubmit={handleSubmit} className="profile-form">
+      <h2> Welcome Back {username}</h2>
 
       <label className="email">Current email</label>
       <input

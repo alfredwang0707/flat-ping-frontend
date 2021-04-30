@@ -25,7 +25,7 @@ input{
     box-sizing: border-box;
   
 }
-h1 {
+.query-form h1 {
   background-image: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v461-taus-14a-modernblackandwhite_1.jpg?w=1000&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=53edffe4fa641b8dc804561fb5f22470);
   background-repeat: no-repeat;
   background-size: cover;
@@ -54,4 +54,23 @@ input:required {
     border-color: #c00000;
   }
 
+ .intro-title {
+    background-image: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v461-taus-14a-modernblackandwhite_1.jpg?w=1000&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=53edffe4fa641b8dc804561fb5f22470);
+    background-repeat: no-repeat;
+    background-size: cover;
   
+    color: #111; 
+    font-family: 'Helvetica Neue', 
+    sans-serif; font-size: 100px;
+    font-weight: bold; 
+    letter-spacing: -1px; 
+    line-height: 1; 
+    padding-left: 130px;
+    padding-right: 130px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    /* text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15); */
+  
+       
+  }

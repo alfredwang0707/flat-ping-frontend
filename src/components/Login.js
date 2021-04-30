@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { useHistory } from "react-router-dom"
+import "./Login.css" 
 
 function Login({ setCurrentUser }) {
   const [username, setUsername] = useState("")
@@ -32,10 +33,11 @@ function Login({ setCurrentUser }) {
 
   return (
     <div>
-      <form className="login-form" onSubmit={handleSubmit}>
+      <form className="login-form" aria-label="log in form" onSubmit={handleSubmit}>
         <h1>Login</h1>
         <label htmlFor="username">Username</label>
         <input
+          placeholder="enter your username here"
           type="text"
           id="username"
           autoComplete="off"
@@ -44,6 +46,7 @@ function Login({ setCurrentUser }) {
         />
         <label htmlFor="password">Password</label>
         <input
+          placeholder="enter your password here"
           type="password"
           id="password"
           value={password}
