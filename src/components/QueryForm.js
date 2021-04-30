@@ -63,6 +63,7 @@ function QueryForm({onAddQuery, currentUser}) {
    
     return (
         <>
+        
         <h1 className="intro-title">We monitor website changes for you</h1>
         <div className="form-container">
             <form className="query-form" onSubmit={handleSubmit}>
@@ -102,6 +103,7 @@ function QueryForm({onAddQuery, currentUser}) {
             </button>
         </form>
         </div>
+      
         
   
    </>

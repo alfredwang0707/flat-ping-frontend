@@ -13,18 +13,20 @@ function Intro() {
         </div>
         <div className="about-us">
             <div className="about-us-item">
-                <h2>Before</h2>
-                <img src={image1} alt="image1"></img>
+                <h2>Before image</h2>
+                <img src={image1} alt="a map with city names on it"></img>
             </div>
             <div className="about-us-item">
-                <h2>After</h2>
-                <img src={image2} alt="image2"></img>
+                <h2>After image</h2>
+                <img src={image2} alt="a map with city names on it but with more landscape"></img>
             </div>
             <div className="about-us-item">
-                <h2>Difference</h2>
-                <img src={image3} alt="image3"></img>
+                <h2>Difference </h2>
+                <img src={image3} alt="a map with the diffrence of the two previous images highlighted"></img>
             </div>
         </div>
+
+        <p className="use-case-p">Flat-ping will continuosly check on a website, and once detected a change, it will send an email to alert the user about it</p>
 
         <p className="use-case">Thousands of use cases</p>
         <div className="cases-container">
@@ -32,7 +34,7 @@ function Intro() {
             <div className="inner">
                 <div className="circle">
                     <div className="front-cases-container-item">
-                        <img src ="https://static.thenounproject.com/png/3484777-200.png" alt="vaccine"></img>
+                        <img src ="https://static.thenounproject.com/png/3484777-200.png" alt="vaccine icon"></img>
                         <h2> Monitor Vaccine Availability</h2>
                     </div>
                 </div>
