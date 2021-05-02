@@ -54,11 +54,12 @@ researched many libraries before settling on these
 *  UPDATE:User Auth is now implemented with JWT
 
 * The file structure is slightly awkward as everything is run locally, and the Rails, Node.js, and frontend public folder all need access to the images.
-* UPDATE:Repo is now split to 3 parts, front end, node, backend, images are now uploaded so all threee have access
+* Apr 11 UPDATE:Repo is now split to 3 parts, front end, node, backend, images are now uploaded so all threee have access
+* Apr 27 UPDATE: Web Acessibility checked with lighthouse/ WAVE 
 
 ## Application usage steps
 1. Go to the form on the home page and enter a url, nickname, and contact email- then submit
-2. Current frequency is set yo once a day to save dyno-hours
+2. Current frequency is set to once a day to save dyno-hours
 3. An email alert will be send to you to check the change manually
 4. Go to the dashboard to manage queries and view alert differences
 
