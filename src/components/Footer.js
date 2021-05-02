@@ -20,7 +20,7 @@ function Footer() {
             <h2>Company</h2>
             <p>Blog</p>
             <p>Press</p>
-            <p>About</p>
+            <a href="https://github.com/alfredwang0707/flat-ping-frontend">About</a>
             <p>Terms of Use</p>
    
             
